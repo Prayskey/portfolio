@@ -1,5 +1,6 @@
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Moon, Menu, X } from "lucide-react";
+import ThemeToggle from "../theme/ThemeToggle.tsx";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,12 +37,7 @@ export default function Header() {
         {/* Action Buttons Group (Theme toggle & Mobile Burger) */}
         <div className="flex items-center space-x-2 ml-auto sm:ml-0">
           {/* Dynamic Dark Mode Button Toggle */}
-          <button
-            className="p-2 rounded-md text-text-muted hover:text-link hover:bg-accent/10 transition-all"
-            aria-label="Toggle theme"
-          >
-            <Moon className="h-5 w-5" />
-          </button>
+          <ThemeToggle />
 
           {/* Mobile Menu Toggle Button: Hidden on desktop (sm:hidden) */}
           <button
