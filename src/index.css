@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Core Palette */
+  --color-light: #f8f9fa; /* Slightly softer off-white for less eye strain */
+  --color-dark: #121212; /* Premium deep dark gray */
+
+  /* Cyan Accents */
+  --color-cyan-main: #097a85; /* Your core primary brand color */
+  --color-cyan-dark: #075f68; /* Darker cyan for hover in Light Mode */
+  --color-cyan-light: #1ea0ae; /* Brighter cyan for hover in Dark Mode */
+
+  /* Light Mode Structural Mapping */
+  --color-bg: var(--color-light);
+  --color-surface: #ffffff;
+  --color-text-main: var(--color-dark);
+  --color-text-muted: #555555; /* Safely defined hex for contrast */
+
+  /* Light Mode Action Mapping */
+  --color-accent: var(--color-cyan-main);
+  --color-accent-hover: var(--color-cyan-dark); /* Darkens on hover */
+  --color-btn-text: #ffffff; /* White text on top of cyan button */
+
+  --color-border-main: #e2e8f0;
+  --color-link: var(--color-cyan-main);
+  --color-link-hover: var(--color-cyan-dark);
+
+  /* Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer theme {
+  .dark {
+    /* Dark Mode Structural Mapping */
+    --color-bg: var(--color-dark);
+    --color-surface: #1e1e1e;
+    --color-text-main: var(--color-light);
+    --color-text-muted: #aaaaaa; /* Safely defined hex for contrast */
+
+    /* Dark Mode Action Mapping */
+    --color-accent: var(--color-cyan-main);
+    --color-accent-hover: var(--color-cyan-light); /* Brightens on hover */
+    --color-btn-text: #ffffff; /* Stays white for high visibility */
+
+    --color-border-main: #2a2a2a;
+    --color-link: var(--color-cyan-light);
+    --color-link-hover: #ffffff;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text-main font-sans;
+  }
+  /* Matches your custom cyan theme perfectly */
+  ::selection {
+    @apply bg-cyan-main/20 text-text-main;
+  }
+}
