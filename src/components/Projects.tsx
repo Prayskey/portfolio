@@ -1,4 +1,3 @@
-
 export default function Projects() {
   const projectList = [
     { id: 1, title: "Web dev 1", category: "Development", desc: "A minimal, highly performant React dashboard application built using Tailwind v4.", image: "/project1.jpg" },
@@ -10,23 +9,20 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="px-25 py-16 mx-auto border-t border-border-main">
-
-      <h2 className="text-center mt-3 text-2xl  tracking-wide  font-heading text-text-muted sm:text-3xl mb-8">
-        Featured <span className="font-bold">Projects</span>
+    <section
+      id="projects"
+      className="px-6 md:px-25 bg-surface py-20 border-t border-border-main"
+    >
+      {/* Your Exact Header Styling Pattern */}
+      <h2 className="text-center mt-3 text-2xl tracking-wide font-heading text-text-muted sm:text-3xl mb-12">
+        Featured <span className="font-extrabold text-accent">Projects</span>
       </h2>
 
-
-
-
-
-
-
-
-
-
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {/*
+        Fluid Responsive Grid Framework:
+        1 column on phones, 2 columns on tablets, 3 columns on desktops
+      */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {projectList.map((project) => (
           <div
             key={project.id}
@@ -39,14 +35,13 @@ export default function Projects() {
                 alt={project.title}
                 className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
                 onError={(e) => {
-                  // Fallback if no image path exists yet
                   e.currentTarget.style.display = 'none';
                 }}
               />
             </div>
 
-            {/* 2. Static Title Label Overlay (Visible by default at the bottom, slides down out of view on hover) */}
-            <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 via-black/40 to-transparent p-4 z-10 transition-transform duration-300 group-hover:translate-y-full">
+            {/* 2. Static Title Label Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/80 via-black/40 to-transparent p-5 z-10 transition-transform duration-300 group-hover:translate-y-full">
               <span className="font-mono text-[10px] text-accent font-bold uppercase tracking-wider">
                 {project.category}
               </span>
@@ -73,23 +68,9 @@ export default function Projects() {
                 <span>→</span>
               </div>
             </div>
-
           </div>
         ))}
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
     </section>
   );
 }
