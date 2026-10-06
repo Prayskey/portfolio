@@ -57,7 +57,7 @@ export default function Resume() {
             {experienceHistory.map((job) => (
               <div key={job.id} className="group relative text-left">
                 {/* Timeline Interactive Anchor Dot */}
-                <div className="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-border-main bg-bg group-hover:border-accent transition-colors duration-200" />
+                <div className="absolute -left-7.75 top-1.5 h-3 w-3 rounded-full border-2 border-border-main bg-bg group-hover:border-accent transition-colors duration-200" />
 
                 {/* Meta details */}
                 <span className="font-mono text-xs font-bold text-link tracking-wide">
@@ -90,7 +90,7 @@ export default function Resume() {
             {educationHistory.map((edu) => (
               <div key={edu.id} className="group relative text-left">
                 {/* Timeline Interactive Anchor Dot */}
-                <div className="absolute -left-[31px] top-1.5 h-3 w-3 rounded-full border-2 border-border-main bg-bg group-hover:border-accent transition-colors duration-200" />
+                <div className="absolute -left-7.75 top-1.5 h-3 w-3 rounded-full border-2 border-border-main bg-bg group-hover:border-accent transition-colors duration-200" />
 
                 {/* Meta details */}
                 <span className="font-mono text-xs font-bold text-link tracking-wide">
