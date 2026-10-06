@@ -1,12 +1,8 @@
-import myPicture from "/public/1791280430122.png"; // Ensure this path is correct based on your project structure
+import myPicture from "/public/1791280430122.png";
 
 export default function Hero() {
   return (
     <section className="relative w-screen h-screen overflow-hidden">
-      {/*
-        Full-screen Background Image:
-        Spans end-to-end on any screen size seamlessly using object-cover.
-      */}
       <img
         src={myPicture}
         alt="Portfolio Background Portrait"
@@ -15,9 +11,10 @@ export default function Hero() {
 
       {/*
         Dynamic Contrast Mask:
-        Ensures your text stands out over the gray photo background in both light and dark modes.
+        Fixed for Light Mode: Uses bg-black/30 to safely tone down brightness and add contrast.
+        Preserved for Dark Mode: Uses dark:bg-dark/40 for that perfect dimming layer you love.
       */}
-      <div className="absolute inset-0 bg-bg/15 dark:bg-dark/40 pointer-events-none" />
+      <div className="absolute inset-0 bg-black/30 dark:bg-dark/40 pointer-events-none transition-colors duration-300" />
 
       {/*
         Your Core Text Content:
