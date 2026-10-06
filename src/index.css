@@ -3,9 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Core Palette */
-  --color-light: #f8f9fa; /* Slightly softer off-white for less eye strain */
-  --color-dark: #121212; /* Premium deep dark gray */
+  --color-light: #f8f9fa;
+  --color-dark: #121212;
 
   /* Cyan Accents */
   --color-cyan-main: #097a85; /* Your core primary brand color */
@@ -20,8 +19,8 @@
 
   /* Light Mode Action Mapping */
   --color-accent: var(--color-cyan-main);
-  --color-accent-hover: var(--color-cyan-dark); /* Darkens on hover */
-  --color-btn-text: #ffffff; /* White text on top of cyan button */
+  --color-accent-hover: var(--color-cyan-dark);
+  --color-btn-text: #ffffff;
 
   --color-border-main: #e2e8f0;
   --color-link: var(--color-cyan-main);
@@ -39,12 +38,10 @@
     --color-bg: var(--color-dark);
     --color-surface: #1e1e1e;
     --color-text-main: var(--color-light);
-    --color-text-muted: #aaaaaa; /* Safely defined hex for contrast */
+    --color-text-muted: #aaaaaa;
 
-    /* Dark Mode Action Mapping */
     --color-accent: var(--color-cyan-main);
-    --color-accent-hover: var(--color-cyan-light); /* Brightens on hover */
-    --color-btn-text: #ffffff; /* Stays white for high visibility */
+    --color-accent-hover: var(--color-cyan-light);
 
     --color-border-main: #2a2a2a;
     --color-link: var(--color-cyan-light);
@@ -56,8 +53,16 @@
   body {
     @apply bg-bg text-text-main font-sans;
   }
-  /* Matches your custom cyan theme perfectly */
+
   ::selection {
-    @apply bg-cyan-main/20 text-text-main;
+    @apply bg-cyan-main/30 text-text-main;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

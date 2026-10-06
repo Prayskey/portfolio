@@ -1,41 +1,45 @@
-import myPicture from "/public/1791280430122.png";
+// Add x, github, Linkedin ect and other contact links icon.
+
+
+
+
+import myPicture from "/1791280430122.png";
 
 export default function Hero() {
   return (
-    <section className="relative w-screen h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden">
+      {/* Portfolio Background Image */}
       <img
         src={myPicture}
         alt="Portfolio Background Portrait"
         className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
       />
-
-      {/*
-        Dynamic Contrast Mask:
-        Fixed for Light Mode: Uses bg-black/30 to safely tone down brightness and add contrast.
-        Preserved for Dark Mode: Uses dark:bg-dark/40 for that perfect dimming layer you love.
-      */}
-      <div className="absolute inset-0 bg-black/30 dark:bg-dark/40 pointer-events-none transition-colors duration-300" />
-
-      {/*
-        Your Core Text Content:
-        Preserves your exact max-w-2xl constraints while centering vertically on the screen.
-      */}
+      {/* Overlay for darkening picture */}
+      <div className="absolute inset-0 dark:bg-black/20 bg-black/10 pointer-events-none transition-colors duration-300" />
       <div className="relative z-10 max-w-2xl h-full px-6 mx-auto flex flex-col justify-center">
-        {/* font-mono accent: using your dynamic semantic link token */}
-        <span className="font-mono text-xs font-semibold tracking-wider text-link uppercase">
+
+        {/* <span className="font-mono text-xs font-semibold tracking-wider text-link uppercase">
           01 // Introduction
-        </span>
+        </span> */}
 
-        {/* font-heading bold title: using your dynamic text-main token */}
-        <h1 className="mt-3 text-4xl font-extrabold tracking-tight font-heading text-text-main sm:text-5xl leading-tight">
-          Building clean digital experiences.
-        </h1>
 
-        {/* font-sans body copy: already perfectly using text-text-muted */}
-        <p className="mt-4 text-lg font-sans text-text-muted leading-relaxed max-w-xl font-medium">
-          I'm a React developer specializing in building minimal, highly
+
+
+        <div className="text-center mt-3 font-heading  tracking-wide  space-y-4 text-light">
+          <h1 className="font-light text-3xl">Hello, I'm</h1>
+          <h1 className="font-bold text-6xl ">Prayskey Ogbonna</h1>
+          <p className="tracking-wider font-mono">AND THIS IS MY PORTFOLIO</p>
+        </div>
+
+
+
+
+        {/* <p className="mt-4 text-lg font-sans text-text-muted leading-relaxed max-w-xl font-medium">
+          I'm a Fullstack React developer specializing in building minimal, highly
           performant user interfaces.
-        </p>
+        </p> */}
+
+
       </div>
     </section>
   );
