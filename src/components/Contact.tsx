@@ -11,7 +11,7 @@ export default function Contact() {
       id="contact"
       className="px-6 md:px-25 py-20 border-t border-border-main"
     >
-      {/* Follows Your Precise Portfolio Header Pattern (Centered & Split) */}
+
       <h2 className="text-center mt-3 text-2xl tracking-wide font-heading text-text-muted sm:text-3xl mb-16">
         Let's Work <span className="font-extrabold text-accent">Together</span>
       </h2>
@@ -55,7 +55,7 @@ export default function Contact() {
                 type="text"
                 id="name"
                 className="w-full px-4 py-3 rounded-xs border border-border-main bg-bg text-text-main font-sans text-sm outline-none focus:border-accent/60 transition-colors"
-                placeholder="John Doe"
+                placeholder="Mona Lisa"
                 required
               />
             </div>
@@ -65,7 +65,7 @@ export default function Contact() {
                 type="email"
                 id="email"
                 className="w-full px-4 py-3 rounded-xs border border-border-main bg-bg text-text-main font-sans text-sm outline-none focus:border-accent/60 transition-colors"
-                placeholder="john@example.com"
+                placeholder="monalisa@example.com"
                 required
               />
             </div>

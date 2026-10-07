@@ -6,10 +6,10 @@
   --color-light: #f8f9fa;
   --color-dark: #121212;
 
-  /* Cyan Accents */
-  --color-cyan-main: #097a85; /* Your core primary brand color */
-  --color-cyan-dark: #075f68; /* Darker cyan for hover in Light Mode */
-  --color-cyan-light: #1ea0ae; /* Brighter cyan for hover in Dark Mode */
+    /* Cyan Accents */
+    --color-cyan-main: #3bbe13; /* Your exact core primary brand color */
+    --color-cyan-dark: #1e7007; /* Deeper green for smooth gradients/borders */
+    --color-cyan-light: #52fa1b; /* Brighter, electric neon green for dark mode links & hovers */
 
   /* Light Mode Structural Mapping */
   --color-bg: var(--color-light);
@@ -27,7 +27,7 @@
   --color-link-hover: var(--color-cyan-dark);
 
   /* Typography */
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Readex Pro", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Plus Jakarta Sans", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }

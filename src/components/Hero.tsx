@@ -1,5 +1,5 @@
 // import { Github, Linkedin, Twitter, Mail } from "lucide-react";
-import myPicture from "/1791280430122.png";
+import myPicture from "../assets/1791280430122.webp";
 
 export default function Hero() {
   // const socialLinks = [
@@ -60,7 +60,7 @@ export default function Hero() {
         </div> */}
 
 
-        
+
 
       </div>
     </section>

@@ -3,33 +3,33 @@ export default function Resume() {
     {
       id: 1,
       period: "2024 — Present",
-      role: "AI Systems Engineering Student",
-      institution: "Self-Directed / Specialized Studies",
-      description: "Deepening knowledge in designing and building intelligent systems, exploring neural networks, and integrating smart technology into real-world software products."
+      role: "B.Sc. Software Engineering",
+      institution: "Federal University of Technology, Owerri (FUTO)",
+      description: "Studying software engineering fundamentals including data structures, algorithms and object-oriented design, while building full-stack projects alongside my coursework."
     },
     {
       id: 2,
-      period: "2021 — 2024",
-      role: "B.Sc. Computer Science / Software Track",
-      institution: "University Institute",
-      description: "Gained core fundamentals in data structures, algorithmic efficiency, and object-oriented systems engineering paradigms."
+      period: "May 2026 — Present",
+      role: "AI/ML Self-Directed Study",
+      institution: "Independent Learning",
+      description: "Learning how to build AI systems, working with neural networks and machine learning tools such as TensorFlow, Keras and Scikit-learn, and applying them to real software products."
     }
   ];
 
   const experienceHistory = [
     {
       id: 1,
-      period: "2024 — Present",
-      role: "Fullstack React Developer",
-      institution: "Freelance / Craft Ventures",
-      description: "Architecting minimal, highly performant web architectures. Refactoring legacy code systems into structured, accessible, utility-first components."
+      period: "Ongoing",
+      role: "Founder & Developer",
+      institution: "NexEdge",
+      description: "Designing and building an automated trading journal that logs trades, analyzes performance and surfaces patterns. Built the full stack with React, Node.js and PostgreSQL, plus a desktop app and a risk calculator."
     },
     {
       id: 2,
-      period: "2023 — 2024",
-      role: "Frontend Developer Intern",
-      institution: "Digital Agency Lab",
-      description: "Collaborated on production-ready user interfaces, optimizing code for speed, core web vitals, and pixel-perfect design-to-code alignment."
+      period: "Hackathon",
+      role: "Developer, Team Project",
+      institution: "CampusFlow",
+      description: "Part of the team that built a blockchain-based clearance system. Student results are stored on-chain and can be verified from anywhere, and students can receive their certificates remotely."
     }
   ];
 
@@ -38,28 +38,24 @@ export default function Resume() {
       id="resume"
       className="px-6 md:px-25 bg-surface py-20 border-t border-border-main"
     >
-      {/* Follows Your Precise Portfolio Header Pattern (Centered & Split) */}
       <h2 className="text-center mt-3 text-2xl tracking-wide font-heading text-text-muted sm:text-3xl mb-16">
         My <span className="font-extrabold text-accent">Qualifications</span>
       </h2>
 
-      {/* Responsive layout: 1 column on mobile, 2 columns on desktop grids */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-7xl mx-auto relative">
 
         {/* SECTION 1: WORK EXPERIENCE */}
         <div className="space-y-10">
           <h3 className="font-heading font-bold text-xl text-text-main tracking-tight flex items-center space-x-2 justify-center md:justify-start">
             <span className="text-link font-mono text-base font-normal">//</span>
-            <span>Work History</span>
+            <span>Experience</span>
           </h3>
 
           <div className="relative border-l border-border-main ml-3 md:ml-3 pl-6 space-y-10 max-w-md mx-auto md:mx-0">
             {experienceHistory.map((job) => (
               <div key={job.id} className="group relative text-left">
-                {/* Timeline Interactive Anchor Dot */}
                 <div className="absolute -left-7.75 top-1.5 h-3 w-3 rounded-full border-2 border-border-main bg-bg group-hover:border-accent transition-colors duration-200" />
 
-                {/* Meta details */}
                 <span className="font-mono text-xs font-bold text-link tracking-wide">
                   {job.period}
                 </span>
@@ -70,7 +66,6 @@ export default function Resume() {
                   {job.institution}
                 </span>
 
-                {/* Summary copy */}
                 <p className="mt-2 font-sans text-sm text-text-muted leading-relaxed">
                   {job.description}
                 </p>
@@ -89,10 +84,8 @@ export default function Resume() {
           <div className="relative border-l border-border-main ml-3 md:ml-3 pl-6 space-y-10 max-w-md mx-auto md:mx-0">
             {educationHistory.map((edu) => (
               <div key={edu.id} className="group relative text-left">
-                {/* Timeline Interactive Anchor Dot */}
                 <div className="absolute -left-7.75 top-1.5 h-3 w-3 rounded-full border-2 border-border-main bg-bg group-hover:border-accent transition-colors duration-200" />
 
-                {/* Meta details */}
                 <span className="font-mono text-xs font-bold text-link tracking-wide">
                   {edu.period}
                 </span>
@@ -103,7 +96,6 @@ export default function Resume() {
                   {edu.institution}
                 </span>
 
-                {/* Summary copy */}
                 <p className="mt-2 font-sans text-sm text-text-muted leading-relaxed">
                   {edu.description}
                 </p>

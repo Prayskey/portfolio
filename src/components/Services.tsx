@@ -30,7 +30,7 @@ export default function Services() {
         {serviceList.map((service) => (
           <div
             key={service.id}
-            className="group p-8 rounded-2xl border border-border-main bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md select-none"
+            className="group p-8 text-center rounded-2xl border border-border-main bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md select-none"
           >
             {/* Later Icon boxes. */}
             <div className="font-mono text-xs font-bold text-link opacity-60 mb-6 group-hover:opacity-100 transition-opacity">
@@ -43,7 +43,7 @@ export default function Services() {
             </h3>
 
             {/* Service Description Body */}
-            <p className="mt-3 font-sans text-sm text-text-muted leading-relaxed">
+            <p className="mt-3 font-sans  text-sm text-text-muted leading-relaxed">
               {service.desc}
             </p>
           </div>
