@@ -4,6 +4,7 @@ import nexedge from "../assets/img/nexedge.webp";
 import travel_site from "../assets/img/travel_site.webp";
 import car_site from "../assets/img/car_site.webp";
 import nexedge_ui from "../assets/img/nexedge_ui.webp";
+import people_shaking_hands from "../assets/img/pexels-felicity-tai-7964468.webp";
 
 export default function Projects() {
   const projectList = [
@@ -13,6 +14,8 @@ export default function Projects() {
       category: "Development",
       desc: "A trading journal that automatically logs your trades, analyzes your performance, and surfaces the patterns behind your results.",
       image: nexedge,
+      isProject: true,
+      href: "https://prayskey-nexedge.vercel.app",
     },
     {
       id: 2,
@@ -20,6 +23,8 @@ export default function Projects() {
       category: "Development",
       desc: "A blockchain-based clearance system that removes the stress from student clearance. Results are stored on-chain and verifiable from anywhere, so students can receive their certificates wherever they are.",
       image: campusflow,
+      isProject: true,
+      href: "https://campusflow-mmt9.onrender.com/",
     },
     // {
     //   id: 3,
@@ -34,6 +39,8 @@ export default function Projects() {
       category: "Design",
       desc: "A Figma design for a travel booking website.",
       image: travel_site,
+      isProject: true,
+      href: "#",
     },
     {
       id: 5,
@@ -41,6 +48,8 @@ export default function Projects() {
       category: "Design",
       desc: "A Figma landing page design for an electric car brand, built around strong product visuals, key specs and a clear call to action.",
       image: car_site,
+      isProject: true,
+      href: "#",
     },
     {
       id: 6,
@@ -48,15 +57,18 @@ export default function Projects() {
       category: "Design",
       desc: "The Figma wireframe for the NexEdge dashboard, laying out balance, equity, goal progress, performance metrics and open trades.",
       image: nexedge_ui,
+      isProject: true,
+      href: "#",
     },
     {
       id: 7,
       title: "Work With Me",
       category: "Contact",
       desc: "Have a project in mind? Let's build something exceptional together.",
-      image: "/project6.jpg",
+      image: people_shaking_hands,
       href: "#contact",
       cta: "Get in touch",
+      isProject: false,
     },
   ];
 
@@ -106,20 +118,15 @@ export default function Projects() {
                 {project.desc}
               </p>
 
-              {project.href ? (
+
                 <a
                   href={project.href}
                   className="mt-4 flex items-center space-x-1 text-xs font-mono font-bold text-link hover:underline"
+                  target={project.isProject ? "_blank" : "_self"}
                 >
-                  <span>{project.cta}</span>
+                  <span>{project.isProject ? "View Project" : "Get in Touch"}</span>
                   <span>→</span>
                 </a>
-              ) : (
-                <div className="mt-4 flex items-center space-x-1 text-xs font-mono font-bold text-link hover:underline cursor-pointer">
-                  <span>View Project</span>
-                  <span>→</span>
-                </div>
-              )}
             </div>
           </div>
         ))}

@@ -7,9 +7,9 @@
   --color-dark: #121212;
 
     /* Cyan Accents */
-    --color-cyan-main: #3bbe13; /* Your exact core primary brand color */
-    --color-cyan-dark: #1e7007; /* Deeper green for smooth gradients/borders */
-    --color-cyan-light: #52fa1b; /* Brighter, electric neon green for dark mode links & hovers */
+    --color-cyan-main: #40b81c; /* Your exact core primary brand color */
+    --color-cyan-dark: #2e8616; /* Deeper green for smooth gradients/borders */
+    --color-cyan-light: #49db18; /* Brighter, electric neon green for dark mode links & hovers */
 
   /* Light Mode Structural Mapping */
   --color-bg: var(--color-light);

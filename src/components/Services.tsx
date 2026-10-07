@@ -1,53 +1,79 @@
+import { Layout, Search, Cpu } from "lucide-react"; // Temporary clean icons you can swap
+
 export default function Services() {
   const serviceList = [
     {
       id: 1,
       title: "Web Development",
-      desc: "Building highly performant, accessible Fullstack React applications and minimal user interfaces tailored for smooth user experiences."
+      tag: "Fullstack / React",
+      desc: "Building highly performant, accessible Fullstack React applications and minimal user interfaces tailored for smooth user experiences.",
+      // Drop your custom JSX SVG element or paths right here
+      svg: <Layout className="h-6 w-6 text-accent" />,
     },
     {
       id: 2,
       title: "SEO Optimization",
-      desc: "Optimizing code architecture, semantic HTML structure, and core web vitals to ensure top rankings on search engines and lightning-fast speeds."
+      tag: "Vitals / Performance",
+      desc: "Optimizing code architecture, semantic HTML structure, and core web vitals to ensure top rankings on search engines and lightning-fast speeds.",
+      svg: <Search className="h-6 w-6 text-accent" />,
     },
     {
       id: 3,
-      title: "AI / ML Integration",
-      desc: "Designing and integrating intelligent AI workflows, automated systems, and smart tech features directly into functional digital products."
-    }
+      title: "AI & ML Integration",
+      tag: "Intelligent Systems",
+      desc: "Designing and integrating intelligent AI workflows, automated systems, and smart tech features directly into functional digital products.",
+      svg: <Cpu className="h-6 w-6 text-accent" />,
+    },
   ];
 
   return (
     <section
       id="services"
-      className="px-6 md:px-25 py-20 border-t border-border-main"
+      className="px-6 bg-surface md:px-25 py-20 border-t border-border-main"
     >
-      <h2 className="text-center mt-3 text-2xl tracking-wide font-heading text-text-muted sm:text-3xl mb-12">
-        What I <span className="font-extrabold text-accent">Do</span>
-      </h2>
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-center mt-3 text-2xl tracking-wide font-heading text-text-muted sm:text-3xl mb-16">
+          What I <span className="font-extrabold text-accent">Do</span>
+        </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-        {serviceList.map((service) => (
-          <div
-            key={service.id}
-            className="group p-8 text-center rounded-2xl border border-border-main bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-md select-none"
-          >
-            {/* Later Icon boxes. */}
-            <div className="font-mono text-xs font-bold text-link opacity-60 mb-6 group-hover:opacity-100 transition-opacity">
-              0{service.id} //
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {serviceList.map((service) => (
+            <div
+              key={service.id}
+              className="group relative flex flex-col justify-between p-8 rounded-sm border border-border-main bg-bg transition-all duration-300 hover:border-accent/40 select-none hover:shadow-xs"
+            >
+              {/* Top Accent Line decoration */}
+              <div className="absolute top-0 left-0 h-0.5 w-0 bg-accent transition-all duration-300 group-hover:w-full" />
+
+              <div>
+                {/* Meta Header Group with inline SVG */}
+                <div className="flex items-center justify-between mb-8">
+                  <span className="font-mono text-xs font-bold text-accent bg-accent/5 px-2.5 py-1 rounded-xs tracking-wider">
+                    {service.tag}
+                  </span>
+
+                  {/* Dynamic SVG Container */}
+                  <div className="p-2 rounded-xs bg-surface border border-border-main/60 transition-colors duration-300 group-hover:border-accent/20 group-hover:bg-accent/5">
+                    {service.svg}
+                  </div>
+                </div>
+
+                {/* Service Heading */}
+                <h3 className="font-heading font-extrabold text-xl text-text-main">
+                  {service.title}
+                </h3>
+
+                {/* Service Description Body */}
+                <p className="mt-4 font-sans text-sm text-text-muted leading-relaxed">
+                  {service.desc}
+                </p>
+              </div>
+
+
+
             </div>
-
-            {/* Service Heading */}
-            <h3 className="font-heading font-bold text-xl text-text-main group-hover:text-link transition-colors">
-              {service.title}
-            </h3>
-
-            {/* Service Description Body */}
-            <p className="mt-3 font-sans  text-sm text-text-muted leading-relaxed">
-              {service.desc}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

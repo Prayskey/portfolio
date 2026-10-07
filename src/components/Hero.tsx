@@ -10,7 +10,7 @@ export default function Hero() {
   // ];
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section id="home" className="relative w-full h-screen overflow-hidden">
       {/* Portfolio Background Image */}
       <img
         src={myPicture}

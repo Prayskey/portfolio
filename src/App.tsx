@@ -16,7 +16,7 @@ function App() {
     <CustomScrollbar />
     <Hero />
     <Projects />
-    <MyStack />
+    {/* <MyStack /> */}
     <AboutMe />
     <Services />
     <Resume />
