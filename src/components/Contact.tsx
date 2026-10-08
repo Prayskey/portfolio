@@ -1,4 +1,3 @@
-// 1. Reusable SVG dictionary to keep icons uniform across Hero and Contact
 const contactIcons = {
   github: (
     <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

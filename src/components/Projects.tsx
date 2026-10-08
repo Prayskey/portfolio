@@ -27,7 +27,7 @@ export default function Projects() {
       desc: "An automated trading journal that captures trades from live broker data and uses analytics and AI-powered coaching to surface patterns in your trading.",
       image: nexedge,
       tags: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-      href: "https://vercel.app", // replace with your live URL
+      href: "https://prayskey-nexedge.vercel.app",
       cta: "View Project",
       external: true,
     },
@@ -38,7 +38,7 @@ export default function Projects() {
       desc: "A university clearance and certificate retrieval platform built at Hack4FUTO. Students clear remotely from any device, and certificates are verified on a blockchain. I built the backend.",
       image: campusflow,
       tags: ["Node.js", "Express", "Supabase", "Blockchain"],
-      href: "https://onrender.com", // replace with your live URL
+      href: "https://campusflow-mmt9.onrender.com",
       cta: "View Project",
       external: true,
     },
@@ -49,7 +49,7 @@ export default function Projects() {
       desc: "A Figma design for a travel booking website with a bold hero, destination search and a clear path from browsing to booking.",
       image: travel_site,
       tags: ["Figma", "UI/UX"],
-      // href: "https://figma.com/...", // add your Figma link to show a button
+      // href: "https://figma.com/...", // Add link to show button
       cta: "View Design",
       external: true,
     },
