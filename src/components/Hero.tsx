@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-// 💡 FIXED: Imported authentic brand icons instead of mapping everything to Mail
-import { Mail as Github,Mail as Linkedin,Mail as Twitter, Mail } from "lucide-react";
+import { Mail as Github, Mail as Linkedin, Mail as Twitter, Mail } from "lucide-react";
 import myPicture from "../assets/1791280430122.webp";
 
 export default function Hero() {
@@ -25,36 +24,21 @@ export default function Hero() {
   };
 
   return (
-    <section
-      id="home"
-      className="relative w-full h-screen overflow-hidden bg-bg transition-colors duration-300"
-    >
-      {/* Background Image */}
+    <section id="home"
+      className="relative w-full h-screen overflow-hidden transition-colors duration-300">
+
       <img
         src={myPicture}
-        alt="Prayskey portrait"
+        alt="Background Image"
         className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
       />
 
-      {/*
-        💡 FIXED LIGHT MODE GLARE:
-        Using absolute black-based masks instead of dynamic 'bg-bg' tokens.
-        This provides high readability for text in both dark navy and light gray themes
-        without washing out your picture.
-      */}
 
-      {/* 1. Base tint: Provides consistent image darkening across both modes */}
-      <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+      <div className="absolute inset-0 dark:bg-black/30 bg-black/25 pointer-events-none transition-colors duration-300" />
 
-      {/* 2. Vertical fade: Protects fixed navbar contrast at the top and anchors the bottom to the next section */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-bg pointer-events-none transition-colors duration-300" />
+      <div className="relative z-10 max-w-2xl h-full px-6 mx-auto flex flex-col justify-center">
 
-      {/* 3. Radial Vignette: Darkens outer frame bounds to focus focus on center details */}
-      <div className="absolute inset-0 bg-radial from-transparent via-black/20 to-black/70 pointer-events-none" />
-
-      {/* Content Container */}
-      <div className="relative z-10 max-w-3xl h-full px-6 mx-auto flex flex-col justify-center items-center">
-
+        {/* Main Introduction Title Stack */}
         {/* Main Title Typography Box */}
         <div className="text-center mt-3 font-heading tracking-wide space-y-3">
           <motion.h1
@@ -85,7 +69,6 @@ export default function Hero() {
           </motion.p>
         </div>
 
-        {/* Staggered Social Icon Row Link Matrix */}
         <motion.div
           variants={socialContainerVariants}
           initial="hidden"
@@ -114,7 +97,38 @@ export default function Hero() {
             </motion.a>
           ))}
         </motion.div>
+
+
+
+
+
+
+        {/* <div className="flex items-center justify-center gap-4 mt-8">
+          {/* {socialLinks.map((link) => (
+            <a
+              key={link.id}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit my ${link.name}`}
+              className="p-3 rounded-full border border-white/10 bg-white/5 text-white/80 transition-all duration-300 hover:text-white hover:bg-accent hover:border-accent hover:-translate-y-1 hover:shadow-md cursor-pointer"
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div> */}
+
+
+
+
       </div>
-    </section>
+    </section >
+
   );
 }
+
+
+
+
+
+

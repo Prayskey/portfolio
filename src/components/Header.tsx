@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion"; // 💡 Import animation tools
+import { motion, AnimatePresence } from "framer-motion";
 import ThemeToggle from "../theme/ThemeToggle.tsx";
 
 export default function Header() {
@@ -68,6 +68,11 @@ export default function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden sm:block">
               <ul className="font-mono text-xs lg:text-sm flex items-center space-x-4 lg:space-x-6 tracking-wider">
+
+
+
+
+
                 {navItems.map((item) => {
                   const isActive = activeSection === item.id;
 
@@ -95,6 +100,15 @@ export default function Header() {
                     </li>
                   );
                 })}
+
+
+
+
+
+
+
+
+
               </ul>
             </nav>
 
@@ -117,7 +131,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* 🎬 MOBILE DROPDOWN REVEAL ANIMATION */}
         <AnimatePresence>
           {isOpen && (
             <motion.nav
