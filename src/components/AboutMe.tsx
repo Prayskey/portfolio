@@ -51,7 +51,7 @@ export default function AboutMe() {
                 download="Prayskey_Ogbonna_Resume.pdf"
                 className="inline-block py-2.5 px-6 rounded-md font-mono text-xs tracking-wider cursor-pointer text-btn-text transition-all duration-300 bg-accent hover:bg-accent-hover hover:-translate-y-0.5 hover:shadow-md"
               >
-                DOWNLOAD_RESUME.PDF
+                DOWNLOAD CV
               </a>
             </div>
           </div>

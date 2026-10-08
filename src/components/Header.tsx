@@ -80,19 +80,19 @@ export default function Header() {
                     <li key={item.label} className="relative py-1 px-2.5">
                       <a
                         href={item.href}
-                        className={`relative z-10 transition-colors duration-300 font-medium ${isActive ? "text-text-main" : "text-text-muted hover:text-link"
+                        className={`relative z-10 transition-colors duration-300 font-medium ${isActive ? "text-text-main" : " hover:text-link"
                           }`}
                       >
                         {item.label}
                       </a>
 
-                      {/* 🎬 DYNAMIC SLIDING PILL BACKGROUND ACCENT */}
+
                       {isActive && (
                         <motion.div
                           layoutId="activeNavBackground"
                           className={`absolute inset-0 rounded transition-colors duration-300 -z-0 ${scrolled
-                              ? "bg-accent/10 dark:bg-accent/5"
-                              : "bg-surface/30 dark:bg-black/25 border border-border-main/10 shadow-sm"
+                            ? "bg-accent/10 dark:bg-accent/5"
+                            : "bg-surface/30 dark:bg-black/25 border border-border-main/10 shadow-sm"
                             }`}
                           transition={{ type: "spring", stiffness: 380, damping: 30 }}
                         />

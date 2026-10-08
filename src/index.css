@@ -6,24 +6,21 @@
   --color-light: #f2f6fb;
   --color-dark: #0A192F;
 
-  /* Richer Teals/Cyans (Adjusted for high readability & depth) */
-  --color-cyan-main: #0d9488;    /* Deep teal: Perfect contrast on light surfaces */
-  --color-cyan-dark: #0f766e;    /* Darker teal for light-mode hovers */
-  --color-cyan-light: #2dd4bf;   /* Vibrant mint/cyan: Cuts beautifully through dark navy */
-  --color-cyan-bright: #64ffda;  /* Blazing neon cyan for subtle dark accents */
+  --color-cyan-main: #0d9488;
+  --color-cyan-dark: #0f766e;
+  --color-cyan-light: #2dd4bf;
+  --color-cyan-bright: #64ffda;
 
-  /* ========================================== */
-  /* ☀️ DEFAULT / LIGHT MODE MAPPING           */
-  /* ========================================== */
   --color-bg: var(--color-light);
   --color-surface: #ffffff;
   --color-text-main: var(--color-dark);
-  --color-text-muted: #4a5568;   /* Darker slate for proper WCAG body text contrast */
+  --color-text-muted: #4a5568;
 
   /* Light Mode Actions */
   --color-accent: var(--color-cyan-main);
+  --color-accent-light: var(--color-cyan-bright);
   --color-accent-hover: var(--color-cyan-dark);
-  --color-btn-text: #ffffff;      /* White text on deep teal buttons */
+  --color-btn-text: #ffffff;
 
   --color-border-main: #e2e8f0;
   --color-link: var(--color-cyan-main);
@@ -37,19 +34,16 @@
 
 @layer theme {
   .dark {
-    /* ========================================== */
-    /* 🌙 DARK MODE MAPPING                        */
-    /* ========================================== */
+
     --color-bg: var(--color-dark);
-    --color-surface: #112240;    /* Adjusted to a sleek navy shade that fits #0A192F */
+    --color-surface: #112240;
     --color-text-main: var(--color-light);
-    --color-text-muted: #8892b0; /* Perfect slate-gray for dark mode body paragraphs */
+    --color-text-muted: #8892b0;
 
     /* Dark Mode Actions */
     --color-accent: var(--color-cyan-light);
     --color-accent-hover: var(--color-cyan-bright);
 
-    /* 💡 THE FIX: Force text inside solid accent buttons to be dark navy for contrast */
     --color-btn-text: var(--color-dark);
 
     --color-border-main: #233554;
@@ -64,7 +58,6 @@
   }
 
   ::selection {
-    /* Updated selection background to match our theme keys */
     @apply bg-cyan-light/30 text-text-main;
   }
 
