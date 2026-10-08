@@ -9,7 +9,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="px-6 md:px-25 py-8 border-t border-border-main  transition-colors duration-300">
+    <footer className="px-6 md:px-16 lg:px-24 py-8 bg-bg border-t border-border-main transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
 
         {/* Left Side: Copyright notice matching your clean font system */}

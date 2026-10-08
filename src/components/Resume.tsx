@@ -67,7 +67,7 @@ export default function Resume() {
 
   const Timeline = ({ title, entries }: { title: string; entries: Entry[] }) => (
     <div className="space-y-8">
-      <h3 className="font-heading font-bold text-xl text-text-main tracking-tight flex items-center space-x-2">
+      <h3 className="font-heading font-semibold text-xl text-text-main tracking-wide flex items-center space-x-2">
         <span className="text-link font-mono text-base font-normal">//</span>
         <span>{title}</span>
       </h3>
@@ -75,17 +75,19 @@ export default function Resume() {
       <div className="relative border-l border-border-main ml-3 pl-6 space-y-8">
         {entries.map((entry) => (
           <div key={entry.id} className="group relative text-left">
-            <div className="absolute -left-7.75 top-1.5 h-3 w-3 rounded-full border-2 border-border-main bg-bg group-hover:border-accent transition-colors duration-200" />
+            {/* Precise, standardized pixel center alignment for timeline points */}
+            <div className="absolute -left-[25px] top-1.5 h-3 w-3 rounded-full border-2 border-border-main bg-bg transition-colors duration-300 group-hover:border-accent" />
+
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
               <div>
-                <h4 className="font-heading font-bold text-base text-text-main group-hover:text-link transition-colors">
+                <h4 className="font-heading font-semibold text-base text-text-main transition-colors duration-200 group-hover:text-link">
                   {entry.role}
                 </h4>
-                <span className="font-sans text-sm text-text-muted block">
+                <span className="font-sans text-sm text-text-muted block mt-0.5">
                   {entry.institution}
                 </span>
               </div>
-              <span className="font-mono text-xs font-bold text-link shrink-0">
+              <span className="font-mono text-xs font-bold text-link shrink-0 mt-0.5">
                 {entry.period}
               </span>
             </div>
@@ -93,7 +95,7 @@ export default function Resume() {
             <ul className="mt-3 space-y-2 font-sans text-sm text-text-muted leading-relaxed">
               {entry.points.map((point) => (
                 <li key={point} className="flex gap-2">
-                  <span className="text-accent shrink-0">▹</span>
+                  <span className="text-accent shrink-0 select-none">▹</span>
                   <span>{point}</span>
                 </li>
               ))}
@@ -105,8 +107,10 @@ export default function Resume() {
   );
 
   return (
-    <section id="resume" className="px-6 md:px-25 py-20 border-t border-border-main">
+    <section id="resume" className="px-6 md:px-16 lg:px-24 py-20 bg-bg border-t border-border-main transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
+
+        {/* Section Headline */}
         <h2 className="text-center text-2xl tracking-wide font-heading text-text-muted sm:text-3xl mb-4">
           My <span className="font-extrabold text-accent">Qualifications</span>
         </h2>
@@ -115,22 +119,28 @@ export default function Resume() {
           {summary}
         </p>
 
-        {/* Dynamic Expanded Multi-Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        {/* Layout Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+          {/* Left Timeline Body */}
           <div className="lg:col-span-8 space-y-16">
             <Timeline title="Experience" entries={experienceHistory} />
             <Timeline title="Education" entries={educationHistory} />
           </div>
 
-          {/* Capabilities Panel */}
-          <div className="lg:col-span-4 space-y-8">
-            <h3 className="font-heading font-bold text-xl text-text-main tracking-tight flex items-center space-x-2">
+          {/* Right Capabilities Sidepanel */}
+          <div className="lg:col-span-4 space-y-8 sticky top-28">
+            <h3 className="font-heading font-semibold text-xl text-text-main tracking-wide flex items-center space-x-2">
               <span className="text-link font-mono text-base font-normal">//</span>
               <span>Capabilities</span>
             </h3>
+
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
               {skillGroups.map((group) => (
-                <div key={group.label} className="rounded-sm border border-border-main bg-bg p-5 transition-all duration-200 hover:border-accent/40">
+                <div
+                  key={group.label}
+                  className="rounded-md border border-border-main bg-surface p-5 transition-all duration-300 hover:border-accent/40 hover:shadow-sm"
+                >
                   <span className="font-mono text-xs font-bold text-link uppercase tracking-wider">
                     {group.label}
                   </span>
@@ -138,7 +148,7 @@ export default function Resume() {
                     {group.items.map((item) => (
                       <span
                         key={item}
-                        className="rounded-sm border border-border-main bg-surface px-2.5 py-1 font-sans text-xs font-semibold text-text-main"
+                        className="rounded-sm border border-border-main bg-bg px-2.5 py-1 font-sans text-xs font-medium text-text-main transition-colors"
                       >
                         {item}
                       </span>
@@ -148,6 +158,7 @@ export default function Resume() {
               ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>

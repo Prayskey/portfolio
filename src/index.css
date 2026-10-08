@@ -3,24 +3,27 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-light: #f8f9fa;
-  --color-dark: #121212;
+  --color-light: #f2f6fb;
+  --color-dark: #0A192F;
 
-    /* Cyan Accents */
-    --color-cyan-main: #40b81c; /* Your exact core primary brand color */
-    --color-cyan-dark: #2e8616; /* Deeper green for smooth gradients/borders */
-    --color-cyan-light: #49db18; /* Brighter, electric neon green for dark mode links & hovers */
+  /* Richer Teals/Cyans (Adjusted for high readability & depth) */
+  --color-cyan-main: #0d9488;    /* Deep teal: Perfect contrast on light surfaces */
+  --color-cyan-dark: #0f766e;    /* Darker teal for light-mode hovers */
+  --color-cyan-light: #2dd4bf;   /* Vibrant mint/cyan: Cuts beautifully through dark navy */
+  --color-cyan-bright: #64ffda;  /* Blazing neon cyan for subtle dark accents */
 
-  /* Light Mode Structural Mapping */
+  /* ========================================== */
+  /* ☀️ DEFAULT / LIGHT MODE MAPPING           */
+  /* ========================================== */
   --color-bg: var(--color-light);
   --color-surface: #ffffff;
   --color-text-main: var(--color-dark);
-  --color-text-muted: #555555; /* Safely defined hex for contrast */
+  --color-text-muted: #4a5568;   /* Darker slate for proper WCAG body text contrast */
 
-  /* Light Mode Action Mapping */
+  /* Light Mode Actions */
   --color-accent: var(--color-cyan-main);
   --color-accent-hover: var(--color-cyan-dark);
-  --color-btn-text: #ffffff;
+  --color-btn-text: #ffffff;      /* White text on deep teal buttons */
 
   --color-border-main: #e2e8f0;
   --color-link: var(--color-cyan-main);
@@ -28,41 +31,51 @@
 
   /* Typography */
   --font-sans: "Readex Pro", ui-sans-serif, system-ui, sans-serif;
-  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-heading: "NTR", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 @layer theme {
   .dark {
-    /* Dark Mode Structural Mapping */
+    /* ========================================== */
+    /* 🌙 DARK MODE MAPPING                        */
+    /* ========================================== */
     --color-bg: var(--color-dark);
-    --color-surface: #1e1e1e;
+    --color-surface: #112240;    /* Adjusted to a sleek navy shade that fits #0A192F */
     --color-text-main: var(--color-light);
-    --color-text-muted: #aaaaaa;
+    --color-text-muted: #8892b0; /* Perfect slate-gray for dark mode body paragraphs */
 
-    --color-accent: var(--color-cyan-main);
-    --color-accent-hover: var(--color-cyan-light);
+    /* Dark Mode Actions */
+    --color-accent: var(--color-cyan-light);
+    --color-accent-hover: var(--color-cyan-bright);
 
-    --color-border-main: #2a2a2a;
-    --color-link: var(--color-cyan-light);
+    /* 💡 THE FIX: Force text inside solid accent buttons to be dark navy for contrast */
+    --color-btn-text: var(--color-dark);
+
+    --color-border-main: #233554;
+    --color-link: var(--color-cyan-bright);
     --color-link-hover: #ffffff;
   }
 }
 
 @layer base {
   body {
-    @apply bg-bg text-text-main font-sans;
+    @apply bg-bg text-text-main font-sans antialiased;
   }
 
   ::selection {
-    @apply bg-cyan-main/30 text-text-main;
+    /* Updated selection background to match our theme keys */
+    @apply bg-cyan-light/30 text-text-main;
+  }
+
+  /* Smooth scrolling globally */
+  html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   ::-webkit-scrollbar {
     display: none;
-  }
-  html {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
   }
 }

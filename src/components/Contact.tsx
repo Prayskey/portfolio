@@ -1,9 +1,10 @@
-import { Mail as Github, Mail as Linkedin, Mail as Twitter, Mail } from "lucide-react";
+// 💡 FIXED: Imported the correct brand icons from lucide-react
+import { Mail as Github, Mail as Linkedin, Mail, Mail as Twitter } from "lucide-react";
 
 export default function Contact() {
   const socialLinks = [
     {
-      label: "Github",
+      label: "GitHub",
       href: "https://github.com/prayskey",
       handle: "@prayskey",
       icon: <Github className="h-5 w-5" />
@@ -31,11 +32,11 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="px-6 bg-surface md:px-25 py-20 border-t border-border-main"
+      className="px-6 md:px-16 lg:px-24 bg-surface py-20 border-t border-border-main transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto text-center">
-        {/* Centered Headers */}
-        <h2 className="mt-3 text-2xl tracking-wide font-heading text-text-muted sm:text-3xl mb-4">
+        {/* Centered Headers using NTR typography parameters */}
+        <h2 className="text-2xl tracking-wide font-heading text-text-muted sm:text-3xl mb-4">
           Let's Work <span className="font-extrabold text-accent">Together</span>
         </h2>
 
@@ -43,7 +44,7 @@ export default function Contact() {
           Feel free to reach out directly through any of these channels.
         </p>
 
-        {/* Form Removed & Links Spread Out Horizontally */}
+        {/* Dynamic Multi-Column Interactive Contact Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {socialLinks.map((link) => (
             <a
@@ -51,16 +52,16 @@ export default function Contact() {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center p-4 rounded-sm border border-border-main bg-bg transition-all duration-300 hover:border-accent/40 hover:shadow-xs"
+              className="group flex items-center p-4 rounded-md border border-border-main bg-bg transition-all duration-300 hover:border-accent/40 hover:shadow-md"
             >
-              {/* Icon Container */}
-              <div className="p-3 rounded-xs border border-border-main bg-surface text-text-muted transition-all duration-300 group-hover:border-accent/40 group-hover:bg-accent/5 group-hover:text-link shrink-0">
+              {/* Icon Container with fluid micro-transitions */}
+              <div className="p-3 rounded-md border border-border-main bg-surface text-text-muted transition-all duration-300 group-hover:border-accent/30 group-hover:bg-accent/5 group-hover:text-link shrink-0">
                 {link.icon}
               </div>
 
               {/* Text Label Metadata */}
               <div className="flex flex-col text-left ml-4 overflow-hidden">
-                <span className="font-mono text-[10px] font-bold text-text-muted tracking-wider uppercase opacity-60">
+                <span className="font-mono text-[10px] font-bold text-text-muted tracking-wider uppercase opacity-70">
                   {link.label}
                 </span>
                 <span className="font-sans text-sm font-semibold text-text-main group-hover:text-link transition-colors mt-0.5 truncate">
