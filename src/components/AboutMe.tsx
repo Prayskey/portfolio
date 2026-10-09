@@ -15,18 +15,10 @@ export default function AboutMe() {
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
 
-          {/*
-            📸 MOBILE & DESKTOP PORTRAIT CONTAINER:
-            Mobile: Centered, compact circle or soft square right above text content
-            Desktop (md:): Switches back to your structured grid column setup
-          */}
-          <div className="col-span-1 md:col-span-4 flex justify-center">
+         {/* Left: Image */}
+          <div className="hidden md:flex md:col-span-4 justify-center">
             <div className="relative overflow-hidden rounded-2xl border border-border-main w-40 h-40 md:w-full md:h-auto max-w-[280px] lg:max-w-[320px] shadow-sm bg-surface">
-              <img
-                src={portfolio_pic}
-                alt="Prayskey portrait"
-                className="w-full h-full object-cover object-center select-none pointer-events-none"
-              />
+              <img src={portfolio_pic} alt="Prayskey portrait" className="w-full h-full object-cover object-center select-none pointer-events-none" />
             </div>
           </div>
 

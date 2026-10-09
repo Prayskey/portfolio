@@ -32,7 +32,7 @@ const svgIcons = {
 const socialLinks = [
   { id: 1, name: "GitHub", href: "https://github.com/prayskey", icon: svgIcons.github },
   { id: 2, name: "LinkedIn", href: "https://linkedin.com/in/prayskey", icon: svgIcons.linkedin },
-  { id: 3, name: "Twitter / X", href: "https://x.com", icon: svgIcons.twitter },
+  { id: 3, name: "Twitter / X", href: "https://x.com/prayskey01", icon: svgIcons.twitter },
   { id: 4, name: "Email", href: "mailto:prayskeyo@gmail.com", icon: svgIcons.email },
 ];
 
